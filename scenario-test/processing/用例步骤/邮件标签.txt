@@ -1,0 +1,154 @@
+#### 创建标签（获取标签 id）
+desc, method, uri = ['创建标签（获取标签 id）', 'post', '/api/v1/mail/tag']
+body = "{\n\t\"name\": \"标签_${random_int(3)}\",\n\t\"color\": \"#F52F59\",\n\t\"mail_id\": \"${mail_id}\"\n}"
+extracts_dict = {"tag_id": "$.data.tag_id"}
+
+#### 创建标签上（获取标签 id）
+desc, method, uri = ['创建标签上（获取标签 id）', 'post', '/api/v1/mail/tag']
+body = "{\n\t\"name\": \"标签_${random_int(3)}\",\n\t\"color\": \"#F52F59\",\n\t\"mail_id\": \"${mail_id}\"\n}"
+extracts_dict = {"tag_id_0": "$.data.tag_id"}
+
+#### 创建标签中（获取标签 id）
+desc, method, uri = ['创建标签中（获取标签 id）', 'post', '/api/v1/mail/tag']
+body = "{\n\t\"name\": \"标签_${random_int(3)}\",\n\t\"color\": \"#F52F59\",\n\t\"mail_id\": \"${mail_id}\"\n}"
+extracts_dict = {"tag_id_1": "$.data.tag_id"}
+
+#### 创建标签下（获取标签 id）
+desc, method, uri = ['创建标签下（获取标签 id）', 'post', '/api/v1/mail/tag']
+body = "{\n\t\"name\": \"标签_${random_int(3)}\",\n\t\"color\": \"#F52F59\",\n\t\"mail_id\": \"${mail_id}\"\n}"
+extracts_dict = {"tag_id_2": "$.data.tag_id"}
+
+#### 创建标签中文英文数字组合（获取标签 id）
+desc, method, uri = ['创建标签中文英文数字组合（获取标签 id）', 'post', '/api/v1/mail/tag']
+body = "{\n\t\"name\": \"WPS金山666ABC\",\n\t\"color\": \"#F52F59\",\n\t\"mail_id\": \"${mail_id}\"\n}"
+extracts_dict = {"tag_id": "$.data.tag_id"}
+
+#### 搜索标签（英文数字组合）
+desc, method, uri = ['搜索标签（英文数字组合）', 'get', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}", "q": "666ABC"}
+validations_dict = {"$.data.list[0].name": "WPS金山666ABC"}
+
+#### 搜索标签（中文数字组合）
+desc, method, uri = ['搜索标签（中文数字组合）', 'get', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}", "q": "金山666"}
+validations_dict = {"$.data.list[0].name": "WPS金山666ABC"}
+
+#### 搜索标签（中英文组合）
+desc, method, uri = ['搜索标签（中英文组合）', 'get', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}", "q": "WPS金山"}
+validations_dict = {"$.data.list[0].name": "WPS金山666ABC"}
+
+#### 搜索标签（数字）
+desc, method, uri = ['搜索标签（数字）', 'get', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}", "q": "666"}
+validations_dict = {"$.data.list[0].name": "WPS金山666ABC"}
+
+#### 搜索标签（英文）
+desc, method, uri = ['搜索标签（英文）', 'get', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}", "q": "WPS"}
+validations_dict = {"$.data.list[0].name": "WPS金山666ABC"}
+
+#### 搜索标签（中文）
+desc, method, uri = ['搜索标签（中文）', 'get', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}", "q": "金山"}
+validations_dict = {"$.data.list[0].name": "WPS金山666ABC"}
+
+#### 删除标签
+desc, method, uri = ['删除标签', 'delete', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}", "tag_id": "${tag_id}"}
+
+#### 删除标签上
+desc, method, uri = ['删除标签上', 'delete', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}", "tag_id": "${tag_id_0}"}
+
+#### 删除标签中
+desc, method, uri = ['删除标签中', 'delete', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}", "tag_id": "${tag_id_1}"}
+
+#### 删除标签下
+desc, method, uri = ['删除标签下', 'delete', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}", "tag_id": "${tag_id_2}"}
+
+#### 修改标签颜色
+desc, method, uri = ['修改标签颜色', 'put', '/api/v1/mail/tag']
+body = "{\n\t\"color\": \"#FF2EAA\",\n\t\"mail_id\": \"${mail_id}\",\n\t\"tag_id\": \"${tag_id}\"\n}"
+
+#### 修改标签名
+desc, method, uri = ['修改标签名', 'put', '/api/v1/mail/tag']
+body = "{\n\t\"name\": \"标签_${random_int(3)}\",\n\t\"color\": \"#F52F59\",\n\t\"mail_id\": \"${mail_id}\",\n\t\"tag_id\": \"${tag_id}\"\n}"
+
+#### 下移上
+desc, method, uri = ['下移上', 'put', '/api/v1/mail/tag']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"tag_id\": \"${tag_id_2}\",\n\t\"color\": \"#F52F59\",\n\t\"pre_tag_id\": 0,\n\t\"after_tag_id\": \"${tag_id_0}\"\n}"
+
+#### 上移中
+desc, method, uri = ['上移中', 'put', '/api/v1/mail/tag']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"tag_id\": \"${tag_id_0}\",\n\t\"color\": \"#F52F59\",\n\t\"pre_tag_id\": \"${tag_id_1}\",\n\t\"after_tag_id\": \"${tag_id_2}\"\n}"
+
+#### 上移下
+desc, method, uri = ['上移下', 'put', '/api/v1/mail/tag']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"tag_id\": \"${tag_id_0}\",\n\t\"color\": \"#F52F59\",\n\t\"pre_tag_id\": \"${tag_id_2}\",\n\t\"after_tag_id\": 0\n}"
+
+#### 校验标签顺序（下移上）
+desc, method, uri = ['校验标签顺序（下移上）', 'get', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}"}
+validations_dict = {"$.data.list[0].tag_id": "${tag_id_2}", "$.data.list[1].tag_id": "${tag_id_0}", "$.data.list[2].tag_id": "${tag_id_1}"}
+
+#### 校验标签顺序（上移中）
+desc, method, uri = ['校验标签顺序（上移中）', 'get', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}"}
+validations_dict = {"$.data.list[0].tag_id": "${tag_id_1}", "$.data.list[1].tag_id": "${tag_id_2}", "$.data.list[2].tag_id": "${tag_id_0}"}
+
+#### 校验标签顺序（上移下）
+desc, method, uri = ['校验标签顺序（上移下）', 'get', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}"}
+validations_dict = {"$.data.list[0].tag_id": "${tag_id_1}", "$.data.list[1].tag_id": "${tag_id_2}", "$.data.list[2].tag_id": "${tag_id_0}"}
+
+#### 创建异常标签（标签 ID 不正确）
+desc, method, uri = ['创建异常标签', 'post', '/api/v1/mail/tag']
+body = "{\n\t\"name\": \" \",\n\t\"color\": \"#F52F59\",\n\t\"mail_id\": \"${mail_id}\"\n}"
+validations_dict = {"$.result": "InvalidArgument"}
+
+#### 收件箱邮件添加标签（聚合模式）
+desc, method, uri = ['收件箱邮件添加标签（聚合模式）', 'post', '/api/v1/mail/marktag']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"include_tagids\": \"${tag_id}\",\n\t\"exclude_tagids\": \"\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"agg_id\\\",\\\"id\\\":\\\"${agg_id_0}\\\"}]\"\n}"
+
+#### 收件箱邮件添加标签
+desc, method, uri = ['收件箱邮件添加标签', 'post', '/api/v1/mail/marktag']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"include_tagids\": \"${tag_id}\",\n\t\"exclude_tagids\": \"\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"}]\"\n}"
+
+#### 收件箱邮件取消标签（聚合模式）
+desc, method, uri = ['收件箱邮件取消标签（聚合模式）', 'post', '/api/v1/mail/marktag']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"agg_id\\\",\\\"id\\\":\\\"${agg_id_0}\\\"}]\",\n\t\"include_tagids\": \"\",\n\t\"exclude_tagids\": \"${tag_id}\"\n}"
+
+#### 收件箱邮件取消标签
+desc, method, uri = ['收件箱邮件取消标签', 'post', '/api/v1/mail/marktag']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"include_tagids\": \"\",\n\t\"exclude_tagids\": \"${tag_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"}]\"\n}"
+
+#### 已发送邮件添加标签
+desc, method, uri = ['已发送邮件添加标签', 'post', '/api/v1/mail/marktag']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"include_tagids\": \"${tag_id}\",\n\t\"exclude_tagids\": \"\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"${Sent}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"}]\"\n}"
+
+#### 获取收件箱列表（确保第一封邮件已添加标签）
+desc, method, uri = ['获取收件箱列表（确保第一封邮件已添加标签）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "INBOX"}
+validations_dict = {"$.data.lists[0].tag_ids": "[${tag_id}]"}
+
+#### 获取已发送邮件列表（确保第一封邮件已添加标签）
+desc, method, uri = ['获取已发送邮件列表（确保第一封邮件已添加标签）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${Query_Sent}"}
+validations_dict = {"$.data.lists[0].tag_ids": "[${tag_id}]"}
+
+#### 获取已删除邮件列表（确保第一封邮件已添加标签）
+desc, method, uri = ['获取已删除邮件列表（确保第一封邮件已添加标签）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${Query_Trash}"}
+validations_dict = {"$.data.lists[0].tag_ids": "[${tag_id}]"}
+
+#### 获取垃圾邮件邮件列表（确保第一封邮件已添加标签）
+desc, method, uri = ['获取垃圾邮件邮件列表（确保第一封邮件已添加标签）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${Query_Junk}"}
+validations_dict = {"$.data.lists[0].tag_ids": "[${tag_id}]"}
+
+
+
+

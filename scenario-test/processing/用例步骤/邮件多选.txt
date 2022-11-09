@@ -1,0 +1,173 @@
+#### 收件箱批量移动到文件夹（移动前两封邮件）
+desc, method, uri = ['收件箱批量移动到文件夹（移动前两封邮件）', 'post', '/api/v1/mail/multiple_move']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\",\n\t\"target_mbox\": \"${folder_name}\"\n}"
+
+#### 收件箱批量移动到草稿箱（移动前两封邮件）
+desc, method, uri = ['收件箱批量移动到草稿箱（移动前两封邮件）', 'post', '/api/v1/mail/multiple_move']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\",\n\t\"target_mbox\": \"${Drafts}\"\n}"
+
+#### 收件箱批量移动到已发送（移动前两封邮件）
+desc, method, uri = ['收件箱批量移动到已发送（移动前两封邮件）', 'post', '/api/v1/mail/multiple_move']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\",\n\t\"target_mbox\": \"${Sent}\"\n}"
+
+#### 收件箱批量移动到已删除（移动前两封邮件）
+desc, method, uri = ['收件箱批量移动到已删除（移动前两封邮件）', 'post', '/api/v1/mail/multiple_move']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\",\n\t\"target_mbox\": \"${Trash}\"\n}"
+
+#### 收件箱批量移动到垃圾邮件（移动前两封邮件）
+desc, method, uri = ['收件箱批量移动到垃圾邮件（移动前两封邮件）', 'post', '/api/v1/mail/multiple_move']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\",\n\t\"target_mbox\": \"${Junk}\"\n}"
+
+#### 收件箱批量删除邮件（删除前两封邮件）
+desc, method, uri = ['收件箱批量删除邮件（删除前两封邮件）', 'post', '/api/v1/mail/multiple_move']
+body = "{\n\t\"target_mbox\": \"${Trash}\",\n\t\"mail_id\": \"${mail_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\"\n}"
+
+#### 收件箱批量星标（前两封邮件打星标）
+desc, method, uri = ['收件箱批量星标（前两封邮件打星标）', 'post', '/api/v1/mail/multiple_mark']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"flagged\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\"\n}"
+
+#### 收件箱批量未读（前两封邮件标记未读）
+desc, method, uri = ['收件箱批量未读（前两封邮件标记未读）', 'post', '/api/v1/mail/multiple_mark']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"unread\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\"\n}"
+
+#### 收件箱批量添加标签（前两封邮件添加标签）
+desc, method, uri = ['收件箱批量添加标签（前两封邮件添加标签）', 'post', '/api/v1/mail/marktag']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"include_tagids\": \"${tag_id}\",\n\t\"exclude_tagids\": \"\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"INBOX\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\"\n}"
+
+#### 草稿箱批量移动到已删除（移动前两封邮件）
+desc, method, uri = ['草稿箱批量移动到已删除（移动前两封邮件）', 'post', '/api/v1/mail/multiple_move']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"${Drafts}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"${Drafts}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\",\n\t\"target_mbox\": \"${Trash}\"\n}"
+
+#### 已发送邮件批量移动到已删除（移动前两封邮件）
+desc, method, uri = ['已发送邮件批量移动到已删除（移动前两封邮件）', 'post', '/api/v1/mail/multiple_move']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"${Sent}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"${Sent}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\",\n\t\"target_mbox\": \"${Trash}\"\n}"
+
+#### 垃圾邮件批量移动到已删除（移动前两封邮件）
+desc, method, uri = ['垃圾邮件批量移动到已删除（移动前两封邮件）', 'post', '/api/v1/mail/multiple_move']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"${Junk}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"${Junk}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\",\n\t\"target_mbox\": \"${Trash}\"\n}"
+
+#### 文件夹邮件批量移动到已删除（移动前两封邮件）
+desc, method, uri = ['文件夹邮件批量移动到已删除（移动前两封邮件）', 'post', '/api/v1/mail/multiple_move']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"${folder_name}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"${folder_name}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\",\n\t\"target_mbox\": \"${Trash}\"\n}"
+
+#### 已发送邮件列表批量星标（前两封邮件打星标）
+desc, method, uri = ['已发送邮件列表批量星标（前两封邮件打星标）', 'post', '/api/v1/mail/multiple_mark']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"flagged\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"${Sent}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"${Sent}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\"\n}"
+
+#### 已发送邮件列表批量未读（前两封邮件标记未读）
+desc, method, uri = ['已发送邮件列表批量未读（前两封邮件标记未读）', 'post', '/api/v1/mail/multiple_mark']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"unread\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"${Sent}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"${Sent}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\"\n}"
+
+#### 已删除邮件列表批量星标（前两封邮件打星标）
+desc, method, uri = ['已删除邮件列表批量星标（前两封邮件打星标）', 'post', '/api/v1/mail/multiple_mark']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"flagged\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"${Trash}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"${Trash}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\"\n}"
+
+#### 已删除邮件列表批量未读（前两封邮件标记未读）
+desc, method, uri = ['已删除邮件列表批量未读（前两封邮件标记未读）', 'post', '/api/v1/mail/multiple_mark']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"unread\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"${Trash}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"${Trash}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\"\n}"
+
+#### 文件夹邮件列表批量星标（前两封邮件打星标）
+desc, method, uri = ['文件夹邮件列表批量星标（前两封邮件打星标）', 'post', '/api/v1/mail/multiple_mark']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"flagged\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"${folder_name}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"${folder_name}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\"\n}"
+
+#### 文件夹邮件列表批量未读（前两封邮件标记未读）
+desc, method, uri = ['文件夹邮件列表批量未读（前两封邮件标记未读）', 'post', '/api/v1/mail/multiple_mark']
+body = "{\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"unread\",\n\t\"mbox_ids\": \"[{\\\"mbox\\\":\\\"${folder_name}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_0}\\\"},{\\\"mbox\\\":\\\"${folder_name}\\\",\\\"id_type\\\":\\\"uid\\\",\\\"id\\\":\\\"${id_1}\\\"}]\"\n}"
+
+#### 获取收件箱列表（确保共两封邮件，获取前两封邮件 id）
+desc, method, uri = ['获取收件箱列表（确保共两封邮件，获取前两封邮件 id）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "INBOX"}
+extracts_dict = {"id_0": "$.data.lists[0].id", "id_1": "$.data.lists[1].id"}
+validations_dict = {"$.data.total": "2"}
+
+#### 获取收件箱列表（确保共两封邮件都已标记星标）
+desc, method, uri = ['获取收件箱列表（确保共两封邮件都已标记星标）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "INBOX"}
+validations_dict = {"$.data.lists[0].flagged": "1", "$.data.lists[1].flagged": "1"}
+
+#### 获取收件箱列表（确保共两封邮件都已标记未读）
+desc, method, uri = ['获取收件箱列表（确保共两封邮件都已标记未读）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "INBOX"}
+validations_dict = {"$.data.lists[0].seen": "0", "$.data.lists[1].seen": "0"}
+
+#### 获取收件箱列表（确保共两封邮件都已添加标签）
+desc, method, uri = ['获取收件箱列表（确保共两封邮件都已添加标签）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "INBOX"}
+validations_dict = {"$.data.lists[0].tag_ids": "[${tag_id}]", "$.data.lists[1].tag_ids": "[${tag_id}]"}
+
+#### 获取星标邮件列表（确保共两封邮件，获取前两封邮件 id）
+desc, method, uri = ['获取星标邮件列表（确保共两封邮件，获取前两封邮件 id）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "FLAGGED", "mail_id": "${mail_id}"}
+extracts_dict = {"id_0": "$.data.lists[0].id", "id_1": "$.data.lists[1].id"}
+validations_dict = {"$.data.total": "2"}
+
+#### 获取星标邮件列表（确保共两封邮件都已标记星标）
+desc, method, uri = ['获取星标邮件列表（确保共两封邮件都已标记星标）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "FLAGGED", "mail_id": "${mail_id}"}
+validations_dict = {"$.data.lists[0].flagged": "1", "$.data.lists[1].flagged": "1"}
+
+#### 获取星标邮件列表（确保共两封邮件都已标记未读）
+desc, method, uri = ['获取星标邮件列表（确保共两封邮件都已标记未读）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "FLAGGED", "mail_id": "${mail_id}"}
+validations_dict = {"$.data.lists[0].seen": "0", "$.data.lists[1].seen": "0"}
+
+#### 获取草稿箱列表（确保共两封邮件，获取前两封邮件 id）
+desc, method, uri = ['获取草稿箱列表（确保共两封邮件，获取前两封邮件 id）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${Drafts}"}
+extracts_dict = {"id_0": "$.data.lists[0].id", "id_1": "$.data.lists[1].id"}
+validations_dict = {"$.data.total": "2"}
+
+#### 获取已发送邮件列表（确保共两封邮件，获取前两封邮件 id）
+desc, method, uri = ['获取已发送邮件列表（确保共两封邮件，获取前两封邮件 id）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${Query_Sent}"}
+extracts_dict = {"id_0": "$.data.lists[0].id", "id_1": "$.data.lists[1].id"}
+validations_dict = {"$.data.total": "2"}
+
+#### 获取已发送邮件列表（确保共两封邮件都已标记星标）
+desc, method, uri = ['获取已发送邮件列表（确保共两封邮件都已标记星标）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${Query_Sent}"}
+validations_dict = {"$.data.lists[0].flagged": "1", "$.data.lists[1].flagged": "1"}
+
+#### 获取已发送邮件列表（确保共两封邮件都已标记未读）
+desc, method, uri = ['获取已发送邮件列表（确保共两封邮件都已标记未读）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${Query_Sent}"}
+validations_dict = {"$.data.lists[0].seen": "0", "$.data.lists[1].seen": "0"}
+
+#### 获取已删除邮件列表（确保共两封邮件，获取前两封邮件 id）
+desc, method, uri = ['获取已删除邮件列表（确保共两封邮件，获取前两封邮件 id）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${Query_Trash}"}
+extracts_dict = {"id_0": "$.data.lists[0].id", "id_1": "$.data.lists[1].id"}
+validations_dict = {"$.data.total": "2"}
+
+#### 获取已删除邮件列表（确保共两封邮件都已标记星标）
+desc, method, uri = ['获取已删除邮件列表（确保共两封邮件都已标记星标）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${Query_Trash}"}
+validations_dict = {"$.data.lists[0].flagged": "1", "$.data.lists[1].flagged": "1"}
+
+#### 获取已删除邮件列表（确保共两封邮件都已标记未读）
+desc, method, uri = ['获取已删除邮件列表（确保共两封邮件都已标记未读）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${Query_Trash}"}
+validations_dict = {"$.data.lists[0].seen": "0", "$.data.lists[1].seen": "0"}
+
+#### 获取文件夹邮件列表（确保共两封邮件，获取前两封邮件 id）
+desc, method, uri = ['获取文件夹邮件列表（确保共两封邮件，获取前两封邮件 id）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${folder_name}"}
+extracts_dict = {"id_0": "$.data.lists[0].id", "id_1": "$.data.lists[1].id"}
+validations_dict = {"$.data.total": "2"}
+
+#### 获取文件夹邮件列表（确保共两封邮件都已标记星标）
+desc, method, uri = ['获取文件夹邮件列表（确保共两封邮件都已标记星标）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${folder_name}"}
+validations_dict = {"$.data.lists[0].flagged": "1", "$.data.lists[1].flagged": "1"}
+
+#### 获取文件夹邮件列表（确保共两封邮件都已标记未读）
+desc, method, uri = ['获取文件夹邮件列表（确保共两封邮件都已标记未读）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${folder_name}"}
+validations_dict = {"$.data.lists[0].seen": "0", "$.data.lists[1].seen": "0"}
+
+#### 获取垃圾邮件列表（确保共两封邮件，获取前两封邮件 id）
+desc, method, uri = ['获取垃圾邮件列表（确保共两封邮件，获取前两封邮件 id）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "${Junk}"}
+extracts_dict = {"id_0": "$.data.lists[0].id", "id_1": "$.data.lists[1].id"}
+validations_dict = {"$.data.total": "2"}
+

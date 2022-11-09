@@ -1,0 +1,22 @@
+#### list
+desc, method, uri = ['list', 'get', '/api/account/v1/corp/list']
+
+#### sign
+desc, method, uri = ['sign', 'get', '/api/v2/mail_setting/sign']
+
+#### user_profile
+desc, method, uri = ['user_profile', 'get', '/api/v1/user_profile']
+
+#### info
+desc, method, uri = ['info', 'get', '/api/account/v1/user/info']
+
+#### refresh
+desc, method, uri = ['refresh', 'get', '/api/v1/mail/refresh']
+
+#### tag
+desc, method, uri = ['tag', 'get', '/api/v1/mail/tag']
+params_dict = {"mail_id": "${mail_id}"}
+
+#### search
+desc, method, uri = ['search', 'get', '/api/v1/mail/search']
+

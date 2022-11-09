@@ -1,0 +1,22 @@
+#### 收件箱标记已读（聚合模式）
+desc, method, uri = ['收件箱标记已读（聚合模式）', 'post', '/api/v1/mail/mark']
+body = "{\n\t\"uid\": \"${id_0}\",\n\t\"mbox\": \"INBOX\",\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"read\",\n\t\"agg_id\": \"${agg_id_0}\"\n}"
+
+#### 收件箱标记未读（聚合模式）
+desc, method, uri = ['收件箱标记未读（聚合模式）', 'post', '/api/v1/mail/mark']
+body = "{\n\t\"uid\": \"${id_0}\",\n\t\"mbox\": \"INBOX\",\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"unread\",\n\t\"agg_id\": \"${agg_id_0}\"\n}"
+
+#### 收件箱标记星标（聚合模式）
+desc, method, uri = ['收件箱标记星标（聚合模式）', 'post', '/api/v1/mail/agg_mark']
+body = "{\n\t\"uid\": \"${id_0}\",\n\t\"mbox\": \"INBOX\",\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"flagged\",\n\t\"agg_id\": \"${agg_id_0}\"\n}"
+
+#### 收件箱取消星标（聚合模式）
+desc, method, uri = ['收件箱取消星标（聚合模式）', 'post', '/api/v1/mail/agg_mark']
+body = "{\n\t\"uid\": \"${id_0}\",\n\t\"mbox\": \"INBOX\",\n\t\"mail_id\": \"${mail_id}\",\n\t\"flag\": \"unflagged\",\n\t\"agg_id\": \"${agg_id_0}\"\n}"
+
+#### 获取收件箱列表（确保共一封邮件，获取第一封邮件 agg_id）
+desc, method, uri = ['获取收件箱列表（确保共一封邮件，获取第一封邮件 agg_id）', 'get', '/api/v1/mail/search']
+params_dict = {"filter": "ALL", "mail_id": "${mail_id}", "mbox": "INBOX"}
+extracts_dict = {"agg_id_0": "$.data.lists[0].agg_id"}
+validations_dict = {"$.data.total": "1"}
+

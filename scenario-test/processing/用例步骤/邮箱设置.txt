@@ -1,0 +1,28 @@
+#### 开启邮件通知
+desc, method, uri = ['开启邮件通知', 'put', '/api/v2/mail_setting']
+body = "{\n\t\"notify\": [\n\t\t{\n\t\t\t\"id\": ${mail_id},\n\t\t\t\"new_email_switch\": 1\n\t\t}\n\t]\n}"
+
+#### 关闭邮件通知
+desc, method, uri = ['关闭邮件通知', 'put', '/api/v2/mail_setting']
+body = "{\n\t\"notify\": [\n\t\t{\n\t\t\t\"id\": ${mail_id},\n\t\t\t\"new_email_switch\": 0\n\t\t}\n\t]\n}"
+
+#### 默认签名
+desc, method, uri = ['默认签名', 'put', '/api/v2/mail_setting/sign']
+body = "{\n\t\"id\": \"${mail_id}\",\n\t\"type\": 1,\n\t\"sign\": \"\"\n}"
+
+#### 自定义签名
+desc, method, uri = ['自定义签名', 'put', '/api/v2/mail_setting/sign']
+body = "{\n\t\"id\": \"${mail_id}\",\n\t\"type\": 2,\n\t\"sign\": \"\"\n}"
+
+#### 不使用签名
+desc, method, uri = ['不使用签名', 'put', '/api/v2/mail_setting/sign']
+body = "{\n\t\"id\": \"${mail_id}\",\n\t\"type\": 0,\n\t\"sign\": \"\"\n}"
+
+#### 切换至聚合模式
+desc, method, uri = ['切换至聚合模式', 'put', '/api/v2/mail_setting']
+body = "{\n\t\"general\": {\n\t\t\"browse_mode\": 1\n\t}\n}"
+
+#### 切换至非聚合模式
+desc, method, uri = ['切换至非聚合模式', 'put', '/api/v2/mail_setting']
+body = "{\n\t\"general\": {\n\t\t\"browse_mode\": 2\n\t}\n}"
+

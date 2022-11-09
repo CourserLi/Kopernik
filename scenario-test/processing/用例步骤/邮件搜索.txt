@@ -1,0 +1,150 @@
+#### 收件箱全文搜索（中英文组合并过滤星标）
+desc, method, uri = ['收件箱全文搜索（中英文组合并过滤星标）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS金山", "filter": "FLAGGED", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱全文搜索（中英文组合并过滤全部）
+desc, method, uri = ['收件箱全文搜索（中英文组合并过滤全部）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS金山", "filter": "ALL", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱全文搜索（中英文组合并过滤未读）
+desc, method, uri = ['收件箱全文搜索（中英文组合并过滤未读）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS金山", "filter": "UNSEEN", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱全文搜索（数字并过滤星标）
+desc, method, uri = ['收件箱全文搜索（数字并过滤星标）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "666", "filter": "FLAGGED", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱全文搜索（数字并过滤全部）
+desc, method, uri = ['收件箱全文搜索（数字并过滤全部）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "666", "filter": "ALL", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱全文搜索（数字并过滤未读）
+desc, method, uri = ['收件箱全文搜索（数字并过滤未读）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "666", "filter": "UNSEEN", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱全文搜索（中文并过滤星标）
+desc, method, uri = ['收件箱全文搜索（中文并过滤星标）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "金山", "filter": "FLAGGED", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱全文搜索（中文并过滤全部）
+desc, method, uri = ['收件箱全文搜索（中文并过滤全部）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "金山", "filter": "ALL", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱全文搜索（中文并过滤未读）
+desc, method, uri = ['收件箱全文搜索（中文并过滤未读）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "金山", "filter": "UNSEEN", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱全文搜索（英文并过滤星标）
+desc, method, uri = ['收件箱全文搜索（英文并过滤星标）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS", "filter": "FLAGGED", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱全文搜索（英文并过滤全部）
+desc, method, uri = ['收件箱全文搜索（英文并过滤全部）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS", "filter": "ALL", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱全文搜索（英文并过滤未读）
+desc, method, uri = ['收件箱全文搜索（英文并过滤未读）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS", "filter": "UNSEEN", "headers": "body"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（中英文组合并过滤星标）
+desc, method, uri = ['收件箱主题搜索（中英文组合并过滤星标）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS金山", "filter": "FLAGGED", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（中英文组合并过滤全部）
+desc, method, uri = ['收件箱主题搜索（中英文组合并过滤全部）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS金山", "filter": "ALL", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（中英文组合并过滤未读）
+desc, method, uri = ['收件箱主题搜索（中英文组合并过滤未读）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS金山", "filter": "UNSEEN", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（数字并过滤星标）
+desc, method, uri = ['收件箱主题搜索（数字并过滤星标）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "666", "filter": "FLAGGED", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（数字并过滤全部）
+desc, method, uri = ['收件箱主题搜索（数字并过滤全部）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "666", "filter": "ALL", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（数字并过滤未读）
+desc, method, uri = ['收件箱主题搜索（数字并过滤未读）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "666", "filter": "UNSEEN", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（中文并过滤星标）
+desc, method, uri = ['收件箱主题搜索（中文并过滤星标）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "金山", "filter": "FLAGGED", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（中文并过滤全部）
+desc, method, uri = ['收件箱主题搜索（中文并过滤全部）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "金山", "filter": "ALL", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（中文并过滤未读）
+desc, method, uri = ['收件箱主题搜索（中文并过滤未读）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "金山", "filter": "UNSEEN", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（英文并过滤星标）
+desc, method, uri = ['收件箱主题搜索（英文并过滤星标）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS", "filter": "FLAGGED", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（英文并过滤全部）
+desc, method, uri = ['收件箱主题搜索（英文并过滤全部）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS", "filter": "ALL", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱主题搜索（英文并过滤未读）
+desc, method, uri = ['收件箱主题搜索（英文并过滤未读）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "WPS", "filter": "UNSEEN", "headers": "subject"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱收件人搜索（中文并过滤星标）
+desc, method, uri = ['收件箱收件人搜索（中文并过滤星标）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "李蓝骏", "filter": "FLAGGED", "headers": "to"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱收件人搜索（中文并过滤全部）
+desc, method, uri = ['收件箱收件人搜索（中文并过滤全部）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "李蓝骏", "filter": "ALL", "headers": "to"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱收件人搜索（中文并过滤未读）
+desc, method, uri = ['收件箱收件人搜索（中文并过滤未读）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "李蓝骏", "filter": "UNSEEN", "headers": "to"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱发件人搜索（中文并过滤星标）
+desc, method, uri = ['收件箱发件人搜索（中文并过滤星标）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "李蓝骏", "filter": "FLAGGED", "headers": "from"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱发件人搜索（中文并过滤全部）
+desc, method, uri = ['收件箱发件人搜索（中文并过滤全部）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "李蓝骏", "filter": "ALL", "headers": "from"}
+validations_dict = {"$.data.total": "1"}
+
+#### 收件箱发件人搜索（中文并过滤未读）
+desc, method, uri = ['收件箱发件人搜索（中文并过滤未读）', 'get', '/api/v1/mail/search']
+params_dict = {"mbox": "INBOX", "mail_id": "${mail_id}", "q": "李蓝骏", "filter": "UNSEEN", "headers": "from"}
+validations_dict = {"$.data.total": "1"}
+

@@ -1,0 +1,7 @@
+uncurl
+cchardet
+jsbeautifier
+pymongo
+requests
+jieba
+Flask

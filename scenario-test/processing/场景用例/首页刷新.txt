@@ -1,0 +1,6 @@
+#### 首页刷新
+list-sign-user_profile-info-refresh-tag-search
+
+#### 专用测试（哥白尼）
+切换至非聚合模式-清空收件箱-清空草稿箱-清空已发送-清空已删除-清空垃圾邮件
+

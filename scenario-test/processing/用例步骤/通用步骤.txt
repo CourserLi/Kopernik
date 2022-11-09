@@ -1,0 +1,32 @@
+#### 发送一封邮件至收件箱
+desc, method, uri = ['发送一封邮件至收件箱', 'post', '/api/v2/mail/send']
+body = "{\n\t\"attachments\": [],\n\t\"draft_mbox\": \"${Drafts}\",\n\t\"mail_id\": \"${mail_id}\",\n\t\"from\": \"${from}\",\n\t\"to\": \"${to}\",\n\t\"cc\": \"\",\n\t\"bcc\": \"\",\n\t\"replyto\": \"\",\n\t\"draft\": 0,\n\t\"followupto\": \"\",\n\t\"subject\": \"WPS金山666\",\n\t\"is_html\": 1,\n\t\"message\": \"<div data-wps-mail-div-wrap=\\\"\\\" style=\\\"font-size:16px;font-family:Microsoft YaHei;\\\"><p>WPS金山666</p></div>\",\n\t\"editorSelector\": \"html\",\n\t\"mdn\": 0,\n\t\"dsn\": 0,\n\t\"priority\": 0,\n\t\"store_target\": \"${Drafts}\",\n\t\"inline_attachments\": [],\n\t\"action_type\": \"\"\n}"
+
+#### 刷新收件箱
+desc, method, uri = ['刷新收件箱', 'get', '/api/v1/mail/refresh']
+params_dict = {"mail_id": "${mail_id}", "mbox": "INBOX"}
+
+#### 清空收件箱
+desc, method, uri = ['清空收件箱', 'post', '/api/v1/settings/folder/purge']
+body = "{\n\t\"mbox\": \"${INBOX}\",\n\t\"mail_id\": \"${mail_id}\"\n}"
+
+#### 清空草稿箱
+desc, method, uri = ['清空草稿箱', 'post', '/api/v1/settings/folder/purge']
+body = "{\n\t\"mbox\": \"${Drafts}\",\n\t\"mail_id\": \"${mail_id}\"\n}"
+
+#### 清空已发送
+desc, method, uri = ['清空已发送', 'post', '/api/v1/settings/folder/purge']
+body = "{\n\t\"mbox\": \"${Sent}\",\n\t\"mail_id\": \"${mail_id}\"\n}"
+
+#### 清空已删除
+desc, method, uri = ['清空已删除', 'post', '/api/v1/settings/folder/purge']
+body = "{\n\t\"mbox\": \"${Trash}\",\n\t\"mail_id\": \"${mail_id}\"\n}"
+
+#### 清空垃圾邮件
+desc, method, uri = ['清空垃圾邮件', 'post', '/api/v1/settings/folder/purge']
+body = "{\n\t\"mbox\": \"${Junk}\",\n\t\"mail_id\": \"${mail_id}\"\n}"
+
+#### 延迟十秒
+desc, method, uri = ['延迟十秒', 'None', 'None']
+delay = 10
+

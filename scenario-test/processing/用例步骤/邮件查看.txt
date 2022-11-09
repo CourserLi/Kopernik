@@ -1,0 +1,30 @@
+#### 查看收件箱邮件
+desc, method, uri = ['查看收件箱邮件', 'get', '/api/v1/mail/preview']
+params_dict = {"mail_id": "${mail_id}", "mbox": "INBOX", "uid": "${id_0}", "agg_id": ""}
+validations_dict = {"$.result": "ok"}
+
+#### 查看已发送邮件
+desc, method, uri = ['查看已发送邮件', 'get', '/api/v1/mail/preview']
+params_dict = {"mail_id": "${mail_id}", "mbox": "${Sent}", "uid": "${id_0}", "agg_id": ""}
+validations_dict = {"$.result": "ok"}
+
+#### 查看已删除邮件
+desc, method, uri = ['查看已删除邮件', 'get', '/api/v1/mail/preview']
+params_dict = {"mail_id": "${mail_id}", "mbox": "${Trash}", "uid": "${id_0}", "agg_id": ""}
+validations_dict = {"$.result": "ok"}
+
+#### 查看草稿箱邮件
+desc, method, uri = ['查看草稿箱邮件', 'get', '/api/v1/mail/preview']
+params_dict = {"mail_id": "${mail_id}", "mbox": "${Drafts}", "uid": "${id_0}", "agg_id": ""}
+validations_dict = {"$.result": "ok"}
+
+#### 查看垃圾邮件邮件
+desc, method, uri = ['查看垃圾邮件邮件', 'get', '/api/v1/mail/preview']
+params_dict = {"mail_id": "${mail_id}", "mbox": "${Junk}", "uid": "${id_0}", "agg_id": ""}
+validations_dict = {"$.result": "ok"}
+
+#### 查看收件箱邮件（聚合模式）
+desc, method, uri = ['查看收件箱邮件（聚合模式）', 'get', '/api/v1/mail/agg_preview']
+params_dict = {"mail_id": "${mail_id}", "mbox": "INBOX", "uid": "${id_0}", "agg_id": "${agg_id_0}"}
+validations_dict = {"$.result": "ok"}
+
