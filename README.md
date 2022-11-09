@@ -1,6 +1,6 @@
 # 哥白尼整体介绍
 
-![image-20220919104038421](.\assets\all.jpg)
+[![zS7Dat.png](https://s1.ax1x.com/2022/11/09/zS7Dat.png)](https://imgse.com/i/zS7Dat)
 
 ### 项目概况
 
@@ -13,7 +13,7 @@
 - 只用维护两种表，方便后期批量修改
 - 数据库中文检索，便于查看用例步骤细节
 
-**PS：构建自动化整体的时间节省了 58%，详情看设计思路和开发日志！！**
+**PS：构建自动化整体的时间节省了 58%，详情看[设计思路](https://github.com/CourserLi/Kopernik/blob/main/%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF.md)和[开发日志](https://github.com/CourserLi/Kopernik/blob/main/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97.md)！！**
 
 ### 注意事项
 1. 哥白尼暂时只能用于邮件项目，且一键迭代 webmail 下面的全部用例分组（不包括 webmail，webmail 是用于存放不放在表单中的用例，不进行迭代）
