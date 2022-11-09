@@ -1,12 +1,12 @@
 # 哥白尼整体介绍
 
-[![zS7Dat.png](https://s1.ax1x.com/2022/11/09/zS7Dat.png)](https://imgse.com/i/zS7Dat)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zS7Dat.png"></div>
 
 ### 项目概况
 
 **项目名为 Kopernik，哥白尼**。众所周知，开普勒是哥白尼的忠实维护者，那么哥白尼对开普勒来说是必不可少的存在，这个项目也是如此，对于用惯开普勒自动化的测试人员来说，哥白尼更是不可或缺的存在
 
-**PS：Kopernik 源代码不涉及公司业务与数据！！并且我离职后此项目已重构！！**
+**PS：Kopernik 源代码不涉及公司业务与数据！！并且我离职后此项目已重构！！因此本项目仅供参考**
 
 ### 使用哥白尼的好处
 - 一键迭代全部用例，方便快捷且不会出错
@@ -71,37 +71,35 @@ PS：这里的 `cookies`、`headers ` 可以任意抓取开普勒的包，然后
 
 <div align=center><img src="https://s1.ax1x.com/2022/11/09/zS74Zn.png"></div>
 
-[![zS74Zn.png](https://s1.ax1x.com/2022/11/09/zS74Zn.png)](https://imgse.com/i/zS74Zn)
-
 1. 先在场景用例表单中填写步骤
 
 文件位置：`Kopernik\scenario-test\processing\场景用例\邮件查看.txt`
 
-[![zS75aq.png](https://s1.ax1x.com/2022/11/09/zS75aq.png)](https://imgse.com/i/zS75aq)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zS75aq.png"></div>
 
 2. 在用例步骤表单中查看所需的步骤是否存在
 
 文件位置：`Kopernik\scenario-test\processing\用例步骤\xxx.txt`
 
-[![zS7TiV.png](https://s1.ax1x.com/2022/11/09/zS7TiV.png)](https://imgse.com/i/zS7TiV)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zS7TiV.png"></div>
 
-[![zS7HRU.png](https://s1.ax1x.com/2022/11/09/zS7HRU.png)](https://imgse.com/i/zS7HRU)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zS7HRU.png"></div>
 
 注意：用例步骤文件夹中的全部文件，它们的用例步骤都是可以用的，相当于在一个文件中，我将它们分开到不同的文件，纯粹是为了方便查看
 
 3. 如果所需的步骤不存在，确定测试的接口，在邮件上测试并抓包
 
-[![zS7LM4.png](https://s1.ax1x.com/2022/11/09/zS7LM4.png)](https://imgse.com/i/zS7LM4)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zS7LM4.png"></div>
 
 4. 在开普勒的专用测试（哥白尼）中，导入 cURL，更改所需参数，Ctrl + S 保存，再抓包
 
-[![zS7XL9.png](https://s1.ax1x.com/2022/11/09/zS7XL9.png)](https://imgse.com/i/zS7XL9)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zS7XL9.png"></div>
 
-[![zS7vZR.png](https://s1.ax1x.com/2022/11/09/zS7vZR.png)](https://imgse.com/i/zS7vZR)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zS7vZR.png"></div>
 
 如果是获取 body 参数，则复制字符串作为 JSON 字面量，粘贴至用例步骤表单中
 
-[![zS7zIx.png](https://s1.ax1x.com/2022/11/09/zS7zIx.png)](https://imgse.com/i/zS7zIx)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zS7zIx.png"></div>
 
 如果是获取 Query 或 参数提取 等参数，不用抓包，可以参考其他步骤填写的，自行填写即可
 
@@ -109,7 +107,7 @@ PS：这里的 `cookies`、`headers ` 可以任意抓取开普勒的包，然后
 
 5. 确认场景用例表单中所需的，在用例步骤表单中都能找到
 
-[![zSHpi6.png](https://s1.ax1x.com/2022/11/09/zSHpi6.png)](https://imgse.com/i/zSHpi6)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zSHpi6.png"></div>
 
 6. 运行表单迭代文件，一键迭代至开普勒
 
@@ -121,19 +119,19 @@ python Kopernik\scenario-test\表单迭代.py
 
 1. 在开普勒中创建新分组（并记录 serviceid ）
 
-[![zSH9JK.png](https://s1.ax1x.com/2022/11/09/zSH9JK.png)](https://imgse.com/i/zSH9JK)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zSH9JK.png"></div>
 
-[![zSHPzD.png](https://s1.ax1x.com/2022/11/09/zSHPzD.png)](https://imgse.com/i/zSHPzD)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zSHPzD.png"></div>
 
 2. 在基类文件 demand 中添加新的用例分组
 
 文件位置：`Kopernik\base\demand.py`
 
-[![zSHFQe.png](https://s1.ax1x.com/2022/11/09/zSHFQe.png)](https://imgse.com/i/zSHFQe)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zSHFQe.png"></div>
 
-[![zSHksH.png](https://s1.ax1x.com/2022/11/09/zSHksH.png)](https://imgse.com/i/zSHksH)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zSHksH.png"></div>
 
-[![zSHVeA.png](https://s1.ax1x.com/2022/11/09/zSHVeA.png)](https://imgse.com/i/zSHVeA)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zSHVeA.png"></div>
 
 在这三处地方的开头，按照规律填写新的 serviceid 即可
 
@@ -147,7 +145,7 @@ python Kopernik\用例检索.py
 
 在浏览器打开 http://127.0.0.1:5000
 
-[![zSHZdI.png](https://s1.ax1x.com/2022/11/09/zSHZdI.png)](https://imgse.com/i/zSHZdI)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zSHZdI.png"></div>
 
 可根据关键字搜索对应用例
 
