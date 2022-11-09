@@ -69,37 +69,39 @@ PS：这里的 `cookies`、`headers ` 可以任意抓取开普勒的包，然后
 
 **演示：在已有的用例分组上，创建新的场景用例（比如我想创建“已发送邮件查看”）**
 
-![image-20220919103903234](.\assets\R1.png)
+<div align=center><img src="https://s1.ax1x.com/2022/11/09/zS74Zn.png"></div>
+
+[![zS74Zn.png](https://s1.ax1x.com/2022/11/09/zS74Zn.png)](https://imgse.com/i/zS74Zn)
 
 1. 先在场景用例表单中填写步骤
 
 文件位置：`Kopernik\scenario-test\processing\场景用例\邮件查看.txt`
 
-![image-20220919104038421](.\assets\R2.png)
+[![zS75aq.png](https://s1.ax1x.com/2022/11/09/zS75aq.png)](https://imgse.com/i/zS75aq)
 
 2. 在用例步骤表单中查看所需的步骤是否存在
 
 文件位置：`Kopernik\scenario-test\processing\用例步骤\xxx.txt`
 
-![image-20220919104412433](.\assets\R3.png)
+[![zS7TiV.png](https://s1.ax1x.com/2022/11/09/zS7TiV.png)](https://imgse.com/i/zS7TiV)
 
-![image-20220919104336087](.\assets\R4.png)
+[![zS7HRU.png](https://s1.ax1x.com/2022/11/09/zS7HRU.png)](https://imgse.com/i/zS7HRU)
 
 注意：用例步骤文件夹中的全部文件，它们的用例步骤都是可以用的，相当于在一个文件中，我将它们分开到不同的文件，纯粹是为了方便查看
 
 3. 如果所需的步骤不存在，确定测试的接口，在邮件上测试并抓包
 
-![image-20220919105546081](.\assets\R5.png)
+[![zS7LM4.png](https://s1.ax1x.com/2022/11/09/zS7LM4.png)](https://imgse.com/i/zS7LM4)
 
 4. 在开普勒的专用测试（哥白尼）中，导入 cURL，更改所需参数，Ctrl + S 保存，再抓包
 
-![image-20220919105731067](.\assets\R6.png)
+[![zS7XL9.png](https://s1.ax1x.com/2022/11/09/zS7XL9.png)](https://imgse.com/i/zS7XL9)
 
-![image-20220919105812045](.\assets\R7.png)
+[![zS7vZR.png](https://s1.ax1x.com/2022/11/09/zS7vZR.png)](https://imgse.com/i/zS7vZR)
 
 如果是获取 body 参数，则复制字符串作为 JSON 字面量，粘贴至用例步骤表单中
 
-![image-20220919105913008](.\assets\R8.png)
+[![zS7zIx.png](https://s1.ax1x.com/2022/11/09/zS7zIx.png)](https://imgse.com/i/zS7zIx)
 
 如果是获取 Query 或 参数提取 等参数，不用抓包，可以参考其他步骤填写的，自行填写即可
 
@@ -107,7 +109,7 @@ PS：这里的 `cookies`、`headers ` 可以任意抓取开普勒的包，然后
 
 5. 确认场景用例表单中所需的，在用例步骤表单中都能找到
 
-![image-20220919110252312](.\assets\R9.png)
+[![zSHpi6.png](https://s1.ax1x.com/2022/11/09/zSHpi6.png)](https://imgse.com/i/zSHpi6)
 
 6. 运行表单迭代文件，一键迭代至开普勒
 
@@ -119,19 +121,19 @@ python Kopernik\scenario-test\表单迭代.py
 
 1. 在开普勒中创建新分组（并记录 serviceid ）
 
-![image-20220919111146838](.\assets\R10.png)
+[![zSH9JK.png](https://s1.ax1x.com/2022/11/09/zSH9JK.png)](https://imgse.com/i/zSH9JK)
 
-![image-20220919111156576](.\assets\R11.png)
+[![zSHPzD.png](https://s1.ax1x.com/2022/11/09/zSHPzD.png)](https://imgse.com/i/zSHPzD)
 
 2. 在基类文件 demand 中添加新的用例分组
 
 文件位置：`Kopernik\base\demand.py`
 
-![image-20220919111540743](.\assets\R12.png)
+[![zSHFQe.png](https://s1.ax1x.com/2022/11/09/zSHFQe.png)](https://imgse.com/i/zSHFQe)
 
-![image-20220919111554288](.\assets\R13.png)
+[![zSHksH.png](https://s1.ax1x.com/2022/11/09/zSHksH.png)](https://imgse.com/i/zSHksH)
 
-![image-20220919111608735](.\assets\R14.png)
+[![zSHVeA.png](https://s1.ax1x.com/2022/11/09/zSHVeA.png)](https://imgse.com/i/zSHVeA)
 
 在这三处地方的开头，按照规律填写新的 serviceid 即可
 
@@ -145,7 +147,7 @@ python Kopernik\用例检索.py
 
 在浏览器打开 http://127.0.0.1:5000
 
-![image-20220919112248541](.\assets\R15.png)
+[![zSHZdI.png](https://s1.ax1x.com/2022/11/09/zSHZdI.png)](https://imgse.com/i/zSHZdI)
 
 可根据关键字搜索对应用例
 
